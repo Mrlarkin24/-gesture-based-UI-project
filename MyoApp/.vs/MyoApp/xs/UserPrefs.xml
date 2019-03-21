@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{D738D444-43B6-018B-E1BC-82E0858F6DF7}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Myo Samples/Scripts/SampleSceneGUI.cs">
+    <Files>
+      <File FileName="Assets/scripts/MovePlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Shoot.cs" Line="40" Column="1" />
+      <File FileName="Assets/scripts/MenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Myo Samples/Scripts/ColorBoxByPose.cs" Line="66" Column="4" />
+      <File FileName="Assets/scripts/MenuControls.cs" Line="30" Column="42" />
+      <File FileName="Assets/Myo/Scripts/ThalmicHub.cs" Line="82" Column="11" />
+      <File FileName="Assets/scripts/playerController.cs" Line="36" Column="14" />
+      <File FileName="Assets/Myo Samples/Scripts/JointOrientation.cs" Line="161" Column="1" />
+      <File FileName="Assets/Myo Samples/Scripts/SampleSceneGUI.cs" Line="55" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
