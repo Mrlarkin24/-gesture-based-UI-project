@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Fire.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\ColorBoxByPose.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\JointOrientation.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\SampleSceneGUI.cs" />
@@ -73,8 +74,18 @@
     <Compile Include="Assets\Myo\Scripts\Myo.NET\Vector3.cs" />
     <Compile Include="Assets\Myo\Scripts\ThalmicHub.cs" />
     <Compile Include="Assets\Myo\Scripts\ThalmicMyo.cs" />
+    <Compile Include="Assets\scripts\createEnemyProjectile.cs" />
+    <Compile Include="Assets\scripts\DestroyGameObject.cs" />
+    <Compile Include="Assets\scripts\DestroyPlayer.cs" />
+    <Compile Include="Assets\scripts\DisplayPlayerHealth.cs" />
+    <Compile Include="Assets\scripts\EnemyShooting.cs" />
+    <Compile Include="Assets\scripts\EnemySpawnControl.cs" />
+    <Compile Include="Assets\scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\scripts\FireBullet.cs" />
     <Compile Include="Assets\scripts\MenuControls.cs" />
     <Compile Include="Assets\scripts\playerController.cs" />
+    <Compile Include="Assets\scripts\playerHealthScript.cs" />
+    <Compile Include="Assets\scripts\ScoreScript.cs" />
     <None Include="Assets\Sprites\SpaceShooterRedux\Spritesheet\sheet.xml" />
     <None Include="Assets\Sprites\SpaceShooterRedux\license.txt" />
     <None Include="Assets\Myo\README-MyoUnity.txt" />

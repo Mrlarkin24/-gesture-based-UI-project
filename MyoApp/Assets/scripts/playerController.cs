@@ -19,9 +19,16 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
+        if (Application.isEditor)
+        {
+
+            
+        }
         // Access the ThalmicMyo component attached to the Myo game object.
         ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
 
+
+        
         // Check if the pose has changed since last update.
         // The ThalmicMyo component of a Myo game object has a pose property that is set to the
         // currently detected pose (e.g. Pose.Fist for the user making a fist). If no pose is currently

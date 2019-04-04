@@ -69,7 +69,7 @@ public class JointOrientation : MonoBehaviour
             Vector3 referenceZeroRoll = computeZeroRollVector (myo.transform.forward);
             _referenceRoll = rollFromZero (referenceZeroRoll, myo.transform.forward, myo.transform.up);
         }
-    /*
+
         // Current zero roll vector and roll value.
         Vector3 zeroRoll = computeZeroRollVector (myo.transform.forward);
         float roll = rollFromZero (zeroRoll, myo.transform.forward, myo.transform.up);
@@ -95,7 +95,7 @@ public class JointOrientation : MonoBehaviour
                                                 -transform.localRotation.y,
                                                 transform.localRotation.z,
                                                 -transform.localRotation.w);
-        } */
+        }
     }
 
     // Compute the angle of rotation clockwise about the forward axis relative to the provided zero roll direction.

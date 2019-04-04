@@ -1,0 +1,2 @@
+/Users/jameskennedy/4thyear/unityProjects/gesture-based-UI-project/MyoApp/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/jameskennedy/4thyear/unityProjects/gesture-based-UI-project/MyoApp/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
