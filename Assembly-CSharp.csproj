@@ -80,6 +80,7 @@
      <Compile Include="Assets\scripts\MenuControls.cs" />
      <Compile Include="Assets\scripts\playerController.cs" />
      <Compile Include="Assets\scripts\playerHealthScript.cs" />
+     <Compile Include="Assets\scripts\PlayerSpawner.cs" />
      <Compile Include="Assets\scripts\ScoreScript.cs" />
      <Compile Include="Assets\scripts\SpeechRecognition.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

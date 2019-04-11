@@ -69,7 +69,13 @@
         // is not on a user's arm, pose will be set to Pose.Unknown.
         if (thalmicMyo.pose != _lastPose)         {             _lastPose = thalmicMyo.pose;              if (sceneName == "Menu")             {                  // Vibrate the Myo armband when a fist is made.                 if (thalmicMyo.pose == Pose.FingersSpread)                 {                     Debug.Log("Menu fist Working");                     thalmicMyo.Vibrate(VibrationType.Medium);                                          Debug.Log(updateReference);                     LoadScene("SampleScene");                                          ExtendUnlockAndNotifyUserAction(thalmicMyo);                  }                 else if (thalmicMyo.pose == Pose.WaveIn)                 {                     Debug.Log("Menu wave in Working");                     LoadScene("Options");                       ExtendUnlockAndNotifyUserAction(thalmicMyo);                 }                 else if (thalmicMyo.pose == Pose.DoubleTap)                 {                     Debug.Log("Menu FrigerSpread works");                     QuitGame();                     ExtendUnlockAndNotifyUserAction(thalmicMyo);                 }             }             else if(sceneName == "SampleScene")             {
 
-                if (thalmicMyo.pose == Pose.Fist)                 {                     Debug.Log("level1 Shooting");                     Shoot();                     ExtendUnlockAndNotifyUserAction(thalmicMyo);                 }
+                if (thalmicMyo.pose == Pose.Fist)                 {  
+                                       Debug.Log("level1 Shooting");   
+                                        while(Pose.Fist){  
+                                                       Shoot();      
+                                        }        
+                                                              ExtendUnlockAndNotifyUserAction(thalmicMyo);  
+                                                                             }
                              }             else if (sceneName == "Options")             {                 if (thalmicMyo.pose == Pose.FingersSpread)                 {                     Debug.Log("Options Working");                     QuitGame();                     ExtendUnlockAndNotifyUserAction(thalmicMyo);                 }                 else if (thalmicMyo.pose == Pose.Fist)                 {                     Debug.Log("level1 Moving Right");                     LoadScene("Menu");                     ExtendUnlockAndNotifyUserAction(thalmicMyo);                 }             }         }         
         }      void ExtendUnlockAndNotifyUserAction(ThalmicMyo myo)     {         ThalmicHub hub = ThalmicHub.instance;          if (hub.lockingPolicy == LockingPolicy.Standard)         {             myo.Unlock(UnlockType.Timed);         }          myo.NotifyUserAction();     }      void FixedUpdate()
     {

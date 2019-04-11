@@ -207,4 +207,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type:
   - Bullet
-  - player

@@ -7,6 +7,7 @@ public class HealthScript : MonoBehaviour
 {
 
     private int health = 3;
+    public GameObject Explosion;
     public GameObject live1, live2, live3;
 
     void OnCollisionEnter2D(Collision2D col)
@@ -63,6 +64,7 @@ public class HealthScript : MonoBehaviour
                 live1.gameObject.SetActive(false);
                 live2.gameObject.SetActive(false);
                 live3.gameObject.SetActive(false);
+                playExplosion();
                 EndGame();
                 break;
             }
@@ -70,5 +72,10 @@ public class HealthScript : MonoBehaviour
 
     void EndGame(){
         SceneManager.LoadSceneAsync("EndMenu");
+    }
+
+    void playExplosion(){
+        GameObject explosion = (GameObject) Instantiate (Explosion);
+        explosion.transform.position = transform.position;
     }
 }

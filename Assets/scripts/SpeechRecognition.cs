@@ -74,6 +74,13 @@ public class SpeechRecognition : MonoBehaviour
                     pauseMenu.SetActive(false);
                 }
                 break;
+            case "return":
+            if(gamePaused == true){
+                Debug.Log("going to the main menu");
+                SceneManager.LoadSceneAsync("Menu");
+                ScoreScript.scoreVal = 0;
+            }
+                break;
         }
 
         
