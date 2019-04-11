@@ -8,11 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class SpeechRecognition : MonoBehaviour
 {
-    public string[] keywords = new string[] { "play", "quit", "help", "main"};
+    public string[] keywords = new string[] { };
     
     public ConfidenceLevel confidence = ConfidenceLevel.Low;
 
     public Text results;
+
+    public bool gamePaused = false;
+    public GameObject pauseMenu;
 
     protected PhraseRecognizer recognizer;
     // variable that changes when word is inputted
@@ -39,7 +42,7 @@ public class SpeechRecognition : MonoBehaviour
 
         switch (word)
         {
-            case "play":
+            case "start":
                 SceneManager.LoadSceneAsync("SampleScene");
                 break;
             case "help":
@@ -49,10 +52,27 @@ public class SpeechRecognition : MonoBehaviour
             case "main":
                 Debug.Log("going to the main menu");
                 SceneManager.LoadSceneAsync("Menu");
+                ScoreScript.scoreVal = 0;
                 break;
             case "quit":
                 Debug.Log("Quitting Game");
                 Application.Quit();
+                break;
+            case "pause":
+                if(gamePaused == false){
+                    Time.timeScale = 0;
+                    gamePaused = true;
+                    Cursor.visible = true;
+                    pauseMenu.SetActive(true);
+                }
+                break;
+            case  "play":
+                if(gamePaused == true){
+                    Time.timeScale = 1;
+                    gamePaused = false;
+                    Cursor.visible = false;
+                    pauseMenu.SetActive(false);
+                }
                 break;
         }
 

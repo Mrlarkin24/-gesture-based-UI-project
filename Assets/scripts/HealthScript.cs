@@ -11,7 +11,7 @@ public class HealthScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "EnemyBullet" )
+        if (col.gameObject.tag == "EnemyBullet" ||col.gameObject.tag == "hazard")
         {
             
             Object.Destroy(col.gameObject);
