@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 public class SpeechRecognition : MonoBehaviour
 {
 
-    Scene currentScene = SceneManager.GetActiveScene();
-    string sceneName = currentScene.name;
+    Scene currentScene;
+    string sceneName;
 
     public string[] keywords = new string[] { };
     
@@ -27,6 +27,8 @@ public class SpeechRecognition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sceneName = currentScene.name;
+        currentScene = SceneManager.GetActiveScene();
         if (keywords != null)
         {
             recognizer = new KeywordRecognizer(keywords, confidence);
@@ -55,9 +57,17 @@ public class SpeechRecognition : MonoBehaviour
                 break;
             case "main":
                 if(sceneName != "SampleScene"){
+                    HealthScript.health = 3;
                     SceneManager.LoadSceneAsync("Menu");
+                    
                 }else{
                     if(gamePaused == true){
+                        ScoreScript.scoreVal = 0;
+                        HealthScript.health = 3;
+                        Time.timeScale = 1.0f;
+                        gamePaused = false;
+                        Cursor.visible = false;
+                        pauseMenu.SetActive(false);
                         SceneManager.LoadSceneAsync("Menu");
                     }
                 }
@@ -88,10 +98,11 @@ public class SpeechRecognition : MonoBehaviour
             case "return":
             if(gamePaused == true){
                 Debug.Log("going to the main menu");
-                SceneManager.LoadSceneAsync("Menu");
-                ScoreScript.scoreVal = 0;
+                
+                
                 Time.timeScale = 1.0f;
-                healthScript.health = 3;
+                HealthScript.health = 3;
+                pauseMenu.SetActive(false);
             }
                 break;
         }
