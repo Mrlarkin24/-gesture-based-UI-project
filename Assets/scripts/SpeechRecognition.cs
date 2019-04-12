@@ -59,18 +59,7 @@ public class SpeechRecognition : MonoBehaviour
             case "main":
                 if(sceneName != "SampleScene"){
                     HealthScript.health = 3;
-                    SceneManager.LoadSceneAsync("Menu");
-                    
-                }else{
-                    if(gamePaused == true){
-                        ScoreScript.scoreVal = 0;
-                        HealthScript.health = 3;
-                        Time.timeScale = 1.0f;
-                        gamePaused = false;
-                        Cursor.visible = false;
-                        pauseMenu.SetActive(false);
-                        SceneManager.LoadSceneAsync("Menu");
-                    }
+                    SceneManager.LoadSceneAsync("Menu");   
                 }
                 Debug.Log("going to the main menu");
                 //SceneManager.LoadSceneAsync("Menu");
@@ -96,14 +85,17 @@ public class SpeechRecognition : MonoBehaviour
                     pauseMenu.SetActive(false);
                 }
                 break;
-            case "return":
+            case "leave":
             if(gamePaused == true){
-                Debug.Log("going to the main menu");
-                
-                
-                Time.timeScale = 1.0f;
-                HealthScript.health = 3;
-                pauseMenu.SetActive(false);
+                if(gamePaused == true){
+                        ScoreScript.scoreVal = 0;
+                        HealthScript.health = 3;
+                        Time.timeScale = 1.0f;
+                        gamePaused = false;
+                        Cursor.visible = false;
+                        pauseMenu.SetActive(false);
+                        SceneManager.LoadSceneAsync("Menu");
+                    }
             }
                 break;
         }
