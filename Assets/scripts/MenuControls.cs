@@ -6,6 +6,8 @@
     // This object must have a ThalmicMyo script attached.
     public GameObject myo = null;
 
+    
+
     // A rotation that compensates for the Myo armband's orientation parallel to the ground, i.e. yaw.
     // Once set, the direction the Myo armband is facing becomes "forward" within the program.
     // Set by making the fingers spread pose or pressing "r".
@@ -71,9 +73,9 @@
 
                 if (thalmicMyo.pose == Pose.Fist)                 {  
                                        Debug.Log("level1 Shooting");   
-                                        while(Pose.Fist){  
+                                        
                                                        Shoot();      
-                                        }        
+                                              
                                                               ExtendUnlockAndNotifyUserAction(thalmicMyo);  
                                                                              }
                              }             else if (sceneName == "Options")             {                 if (thalmicMyo.pose == Pose.FingersSpread)                 {                     Debug.Log("Options Working");                     QuitGame();                     ExtendUnlockAndNotifyUserAction(thalmicMyo);                 }                 else if (thalmicMyo.pose == Pose.Fist)                 {                     Debug.Log("level1 Moving Right");                     LoadScene("Menu");                     ExtendUnlockAndNotifyUserAction(thalmicMyo);                 }             }         }         

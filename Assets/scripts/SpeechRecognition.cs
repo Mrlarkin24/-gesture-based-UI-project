@@ -8,6 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class SpeechRecognition : MonoBehaviour
 {
+
+    Scene currentScene = SceneManager.GetActiveScene();
+    string sceneName = currentScene.name;
+
     public string[] keywords = new string[] { };
     
     public ConfidenceLevel confidence = ConfidenceLevel.Low;
@@ -50,8 +54,15 @@ public class SpeechRecognition : MonoBehaviour
                 SceneManager.LoadSceneAsync("tutorialScene");
                 break;
             case "main":
+                if(sceneName != "SampleScene"){
+                    SceneManager.LoadSceneAsync("Menu");
+                }else{
+                    if(gamePaused == true){
+                        SceneManager.LoadSceneAsync("Menu");
+                    }
+                }
                 Debug.Log("going to the main menu");
-                SceneManager.LoadSceneAsync("Menu");
+                //SceneManager.LoadSceneAsync("Menu");
                 ScoreScript.scoreVal = 0;
                 break;
             case "quit":
@@ -68,7 +79,7 @@ public class SpeechRecognition : MonoBehaviour
                 break;
             case  "play":
                 if(gamePaused == true){
-                    Time.timeScale = 1;
+                    Time.timeScale = 1.0f;
                     gamePaused = false;
                     Cursor.visible = false;
                     pauseMenu.SetActive(false);
@@ -79,6 +90,8 @@ public class SpeechRecognition : MonoBehaviour
                 Debug.Log("going to the main menu");
                 SceneManager.LoadSceneAsync("Menu");
                 ScoreScript.scoreVal = 0;
+                Time.timeScale = 1.0f;
+                healthScript.health = 3;
             }
                 break;
         }
