@@ -46,7 +46,7 @@ MonoBehaviour:
   projectileSpawn: {fileID: 0}
   projectile: {fileID: 8616000697776793536, guid: 86f5359d6f32441188391b3cfd56b335,
     type: 3}
-  nextFire: 0.3
+  nextFire: 1
   currentTime: 0
 --- !u!1 &6826796691777962422
 GameObject:
@@ -147,7 +147,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

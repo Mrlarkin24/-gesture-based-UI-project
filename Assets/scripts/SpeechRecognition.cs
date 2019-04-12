@@ -50,6 +50,7 @@ public class SpeechRecognition : MonoBehaviour
         {
             case "start":
                 SceneManager.LoadSceneAsync("SampleScene");
+                Time.timeScale = 1.0f;
                 break;
             case "help":
                 Debug.Log("WE will help you");
