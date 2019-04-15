@@ -93,3 +93,12 @@ Our recommendations is that during the research process the main focus shouldn't
 On reflection we have learned quite a bit, Learning how to control the Myo through some simple code provided by the sdk was challenging but also provied us with a new way of learn about hardware, I think in the end we came to a better understanding of the Myo then we would have if we had more resources online.
 
 We also learn about creative solutions when it comes to hardware limitations, whether it be using a different aspect of the hardware or using a different hardware to cover the downfall of the original piece of hardware
+
+## How to Run:
+What you need:
+
+  - Windows Device
+  
+  - Myo armband
+  
+Then Run the executable.
