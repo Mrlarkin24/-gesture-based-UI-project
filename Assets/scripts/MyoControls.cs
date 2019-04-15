@@ -1,4 +1,10 @@
-﻿using System.Collections; using System.Collections.Generic; using UnityEngine; using UnityEngine.SceneManagement;   using LockingPolicy = Thalmic.Myo.LockingPolicy; using Pose = Thalmic.Myo.Pose; using UnlockType = Thalmic.Myo.UnlockType; using VibrationType = Thalmic.Myo.VibrationType;  public class MenuControls : MonoBehaviour {      public Rigidbody2D rb;     public float moveSpeed = 1.0f;     public Vector2 moveV;      public Transform projectileSpawn;
+﻿using System.Collections;
+ using System.Collections.Generic; 
+using UnityEngine; 
+using UnityEngine.SceneManagement;
+   using LockingPolicy = Thalmic.Myo.LockingPolicy; 
+using Pose = Thalmic.Myo.Pose; using UnlockType = Thalmic.Myo.UnlockType; 
+using VibrationType = Thalmic.Myo.VibrationType;  public class MyoControls : MonoBehaviour {      public Rigidbody2D rb;     public float moveSpeed = 1.0f;     public Vector2 moveV;      public Transform projectileSpawn;
     public GameObject bulletTest;
 
     public float nextFire = 1.0f;
