@@ -50,7 +50,9 @@ When choosing what gestures to incorporate into our game we decided that the ges
 #### Final Controls:
 Myo Controls:
 ![Controls](https://i.imgur.com/7crAhgM.jpg)
+
 Voice Controls:
+
 | Main Menu | Commands |
 | ------ | ------ |
 | Start Game | Start |
